@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     itemText: {
         color: '#fff',
         fontSize: 18,
-        paddingBottom: 10
+        paddingBottom: 10,
 
     },
     itemPrice: {

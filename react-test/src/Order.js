@@ -7,7 +7,10 @@ export const Order = () => {
         <View style={styles.orderList}>
             <View>
                 <Text style={styles.orderHeader}>Ваш заказ</Text>
-                
+                <View style={styles.login}>
+                    <Text style={styles.text}>Ваш Логин:</Text>
+                    <TextInput style={styles.input} placeholder='1' placeholder='Логин' />
+                </View>
                 <View style={styles.name}>
                     <Text style={styles.text}>Ваше Имя:</Text>
                     <TextInput style={styles.input} placeholder='1' placeholder='Имя' />
@@ -24,6 +27,10 @@ export const Order = () => {
                     <Text style={styles.text}>Способо оплаты:</Text>
                     <TextInput style={styles.input} placeholder='1' placeholder='Способ оплаты' />
                 </View>
+                <View style={styles.promo}>
+                    <Text style={styles.text}>Ввведите промокод:</Text>
+                    <TextInput style={styles.input} placeholder='1' placeholder='Промокод' />
+                </View>
                 <View style={styles.item}>
                     <Text style={styles.text}>Количество позиций:</Text>
                     <Text style={styles.text}>3</Text>
@@ -32,10 +39,7 @@ export const Order = () => {
                     <Text style={styles.text}>Итоговая сумма:</Text>
                     <Text style={styles.text}>36$</Text>
                 </View>
-                <View style={styles.promo}>
-                    <Text style={styles.text}>Ввведите промокод:</Text>
-                    <TextInput style={styles.input} placeholder='1' placeholder='Промокод' />
-                </View>
+                
                 <View>
                     <Button style={styles.itemButton} title="Оформить доставку" />
                 </View>
@@ -63,8 +67,14 @@ const styles = StyleSheet.create({
     finalPrice: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingTop: 10
+        paddingTop: 10,
+        marginBottom: 40
         
+    },
+    login: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 40
     },
     text: {
         fontSize: 20,
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 30,
-        paddingTop: 40
+        paddingTop: 60
     }
 
 })
